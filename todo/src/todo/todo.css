@@ -1,0 +1,106 @@
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Barlow', 'Fraunces', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  background-color: #FEFCF7;
+}
+
+main {
+  flex-grow: 1;
+}
+
+img {
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.divs {
+  display: none;
+}
+
+.div {
+  display: block;
+  padding: 50px 100px;
+  background-color: bisque;
+  position: relative;
+  animation: mymove 5s ease-in-out;
+}
+
+@keyframes mymove {
+  from {
+    top: -400px;
+  }
+
+  to {
+    top: 0px;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .div {
+    padding: 35px 50px;
+  }
+
+  @keyframes mymove {
+    from {
+      top: -1900px;
+    }
+
+    to {
+      top: 0px;
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.spand,
+.form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
